@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
+  <h4>Md Mamunur Rahman</h4>
+  <h3>Powered by GPT-3(Chat-GPT)</h3>
+  <h3>Ask Me Question</h3>
+  <form action="/" method="post">
+    <input type="text" id="chatinput" name="chat_input" placeholder="Ask" required />
+    <input type="submit" value="Ask" />
+  </form>
+  <h4>Question:</h4>
+
+  {% if result %}
+  <label id="resultshow">{{ chat_input }}</label>
+  
+  
+  <div class="result">
+    <h4>Answer:</h4>
+    {{ result }}
+  </div>
+  {% endif %}
+
+</body>
