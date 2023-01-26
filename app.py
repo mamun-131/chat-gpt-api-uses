@@ -5,7 +5,7 @@ from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = "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"
+openai.api_key = ""
 
 @app.route("/", methods=("GET", "POST"))
 def index():
